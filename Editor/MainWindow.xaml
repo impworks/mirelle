@@ -1,0 +1,180 @@
+﻿<Window x:Class="Editor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:hb="clr-namespace:SyntaxHighlightBox"
+        xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+        xmlns:local="clr-namespace:Editor"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Title="{x:Static local:Resources.Caption}"
+        Height="600" Width="800"
+        RenderOptions.BitmapScalingMode="HighQuality"
+        UseLayoutRounding="True" Icon="pack://application:,,,/Images/script-m.ico" Loaded="Window_Loaded">
+
+    <Window.CommandBindings>
+        <CommandBinding x:Name="NewCommand" Command="ApplicationCommands.New" CanExecute="CommandBinding_CanExecute" Executed="NewCommand_Executed" />
+        <CommandBinding x:Name="OpenCommand" Command="ApplicationCommands.Open" CanExecute="CommandBinding_CanExecute" Executed="OpenCommand_Executed" />
+        <CommandBinding x:Name="SaveCommand" Command="ApplicationCommands.Save" CanExecute="DocumentCommand_CanExecute" Executed="SaveCommand_Executed" />
+        <CommandBinding x:Name="CompileCommand" Command="{x:Static local:MirelleCommands.Compile}" CanExecute="DocumentCommand_CanExecute" Executed="CompileCommand_Executed" />
+        <CommandBinding x:Name="RunCommand" Command="{x:Static local:MirelleCommands.Run}" CanExecute="DocumentCommand_CanExecute" Executed="RunCommand_Executed" />
+        <CommandBinding x:Name="InfoCommand" Command="{x:Static local:MirelleCommands.Info}" CanExecute="CommandBinding_CanExecute" Executed="InfoCommand_Executed" />
+
+        <CommandBinding x:Name="LangRussianCommand" Command="{x:Static local:MirelleCommands.LangRussian}" CanExecute="CommandBinding_CanExecute" Executed="LangRussianCommand_Executed" />
+        <CommandBinding x:Name="LangEnglishCommand" Command="{x:Static local:MirelleCommands.LangEnglish}" CanExecute="CommandBinding_CanExecute" Executed="LangEnglishCommand_Executed" />
+    </Window.CommandBindings>
+    
+    <Window.InputBindings>
+        <KeyBinding Command="{x:Static local:MirelleCommands.Compile}" Key="F6" />
+        <KeyBinding Command="{x:Static local:MirelleCommands.Run}" Key="F5" />
+        <KeyBinding Command="{x:Static local:MirelleCommands.Info}" Key="F1" />
+    </Window.InputBindings>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24" />
+            <RowDefinition Height="28" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="24" />
+        </Grid.RowDefinitions>
+        
+        <Menu>
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch" />
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem x:Name="FileMenu" Header="{x:Static local:Resources.File}">
+                <MenuItem x:Name="NewMenu" Header="{x:Static local:Resources.New}" InputGestureText="Ctrl+N" Command="ApplicationCommands.New">
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/document.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="OpenMenu" Header="{x:Static local:Resources.Open}" InputGestureText="Ctrl+O" Command="ApplicationCommands.Open">
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/folder-horizontal-open.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="SaveMenu" Header="{x:Static local:Resources.Save}" InputGestureText="Ctrl+S" Command="ApplicationCommands.Save">
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/disk.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator />
+                <MenuItem x:Name="ExitMenu" Header="{x:Static local:Resources.Exit}" InputGestureText="Alt+F4">
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/cross-button.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="BuildMenu" Header="{x:Static local:Resources.Build}">
+                <MenuItem x:Name="CompileMenu" Header="{x:Static local:Resources.Compile}" InputGestureText="F6" Command="{x:Static local:MirelleCommands.Compile}">
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/compile.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="RunMenu" Header="{x:Static local:Resources.Run}" InputGestureText="F6" Command="{x:Static local:MirelleCommands.Run}">
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/control.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem x:Name="InfoMenu" Header="{x:Static local:Resources.Info}">
+                <MenuItem x:Name="AboutMenu" Header="{x:Static local:Resources.About}" InputGestureText="F1" Command="{x:Static local:MirelleCommands.Info}" >
+                    <MenuItem.Icon>
+                        <Image Height="16" Source="pack://application:,,,/Images/information-button.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            
+            <MenuItem x:Name="LanguagesMenu" Header="{x:Static local:Resources.Languages}" HorizontalAlignment="Right">
+                <MenuItem x:Name="RussianMenu" Header="Русский" Command="{x:Static local:MirelleCommands.LangRussian}">
+                    <MenuItem.Icon>
+                        <Image Width="16" Source="pack://application:,,,/Images/ru.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="EnglishMenu" Header="English" Command="{x:Static local:MirelleCommands.LangEnglish}">
+                    <MenuItem.Icon>
+                        <Image Width="16" Source="pack://application:,,,/Images/gb.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <ToolBarTray Grid.Row="1" x:Name="Toolbar">
+            <ToolBar x:Name="FileToolbar" Band="1" BandIndex="1">
+                <Button Height="24" BorderThickness="0" x:Name="NewButton" ToolTip="{x:Static local:Resources.NewHint}" Command="ApplicationCommands.New">
+                    <Image Height="16" Source="pack://application:,,,/Images/document.png" />
+                </Button>
+                <Button Height="24" BorderThickness="0" x:Name="OpenButton" ToolTip="{x:Static local:Resources.OpenHint}" Command="ApplicationCommands.Open">
+                    <Image Height="16" Source="pack://application:,,,/Images/folder-horizontal-open.png" />
+                </Button>
+                <Button Height="24" BorderThickness="0" x:Name="SaveButton" ToolTip="{x:Static local:Resources.SaveHint}" Command="ApplicationCommands.Save">
+                    <Image Height="16" Source="pack://application:,,,/Images/disk.png" />
+                </Button>
+                <Separator></Separator>
+                <Button Height="24" BorderThickness="0" x:Name="CompileButton" ToolTip="{x:Static local:Resources.CompileHint}" Command="{x:Static local:MirelleCommands.Compile}">
+                    <Image Height="16" Source="pack://application:,,,/Images/compile.png" />
+                </Button>
+                <Button Height="24" BorderThickness="0" x:Name="RunButton" ToolTip="{x:Static local:Resources.RunHint}" Command="{x:Static local:MirelleCommands.Run}">
+                    <Image Height="16" Source="pack://application:,,,/Images/control.png" />
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+        
+        <ad:DockingManager x:Name="dockingManager" Grid.Row="2">
+            <ad:ResizingPanel Orientation="Vertical">
+                <ad:DocumentPane x:Name="docContent">
+                </ad:DocumentPane>
+                <ad:DockablePane ad:ResizingPanel.ResizeHeight="100">
+                    <ad:DockableContent x:Name="ScratchPadTab" Title="{x:Static local:Resources.ScratchPad}">
+                        <TextBox x:Name="ScratchPad">
+                        </TextBox>
+                    </ad:DockableContent>
+                    <ad:DockableContent x:Name="Errors" Title="{x:Static local:Resources.ErrorConsole}">
+                        <ListView x:Name="ErrorTable">
+                            <ListView.View>
+                                <GridView>
+                                    <GridViewColumn x:Name="ErrorColumn" Header="{x:Static local:Resources.Error}" Width="500">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Message}"></TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn x:Name="FileColumn"  Header="{x:Static local:Resources.File}" Width="100">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding File}"></TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn x:Name="LineColumn"  Header="{x:Static local:Resources.Line}" Width="50">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Line}"></TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                    <GridViewColumn x:Name="OffsetColumn"  Header="{x:Static local:Resources.Offset}" Width="50">
+                                        <GridViewColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Offset}"></TextBlock>
+                                            </DataTemplate>
+                                        </GridViewColumn.CellTemplate>
+                                    </GridViewColumn>
+                                </GridView>
+                            </ListView.View>
+                        </ListView>
+                    </ad:DockableContent>
+                </ad:DockablePane>
+            </ad:ResizingPanel>
+        </ad:DockingManager>
+        
+        <StatusBar Grid.Row="3">
+            <StackPanel Orientation="Horizontal">
+                <Image Height="16" Source="pack://application:,,,/Images/information-white.png" />
+                <Label Margin="0 -5 -5 -5"  x:Name="Status" Content="{x:Static local:Resources.Welcome}" />
+            </StackPanel>
+        </StatusBar>
+        
+    </Grid>
+</Window>

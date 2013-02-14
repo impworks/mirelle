@@ -1,0 +1,58 @@
+﻿main         = { global_stmt } EOF;
+global_stmt  = type | enum | local_stmt | include | emit | use ;
+type         = "type", type_name, [ ":", identifier ], "{", { type_stmt, }, "}" ;
+type_stmt    = type_field | type_method | autoconstr ;
+type_field   = [ "static" ], signature, "@", field_name, [ "=", constant ],  NL ;
+type_method  = [ "static" ], signature, method_name, [ ")", signature, identifier, { ",", signature, identifier }, ")" ], "{", { local_stmt }, "}" ;
+autoconstr   = "autoconstruct" NL ;
+enum         = "enum", type_name, "{", { identifier, ( NL | ";" ) }, "}" ;
+include      = "include" string NL ;
+use          = "use" string NL;
+local_stmt   = ( if | for | while | return | print | emit | "exit" | "break" | "redo" | generic_stmt ) ;
+if           = "if", expr, "do", code_block [ "else", code_block ] ;
+while        = "while", expr, "do", loop_block ;
+for          = "for", var_name, [ "=>", var_name ], "in", expr, "do", loop_block ;
+return       = "return", [ expr ], NL;
+print        = "print", [ { expr, "," } ], NL;
+code_block   = local_stmt | "{", { local_stmt }, "}" ;
+generic_stmt = ( "var", var_name, "=", expr | expr, [ assign, expr ] ), NL;
+assign       = "=" | "+=" | "-=" | "*=" | "/=" | "%=" | "**="
+expr         = block1, { sign1, block1 }, [ "as", type_name ] ;
+sign1        = "&&" | "||" | "^^" ;
+block1       = block2 [ sign2, block2 ] ;
+sign2        = "==" | "!=" | "<" | ">" | "<=" | ">" | "in" ;
+block2       = [ "-" | "!" ], block3, { sign3, block3 } ;
+sign3        = "-" | "+" ;
+block3       = block4, { sign4, block4 } ;
+sign4        = "*" | "/" | "%" ;
+block4       = block5, { sign5, block5 } ;
+sign5        = "**" ;
+block5       = block6, { sign6, block6 } ;
+sign6        = "&" | "|" | "^" ;
+block6       = block7, { ".", accessor | index } ;
+block7       = block8, [ "..", block8 ] ;
+block8       = [ "@" | type_name, ":" ], accessor | literal | newobj | dict | flow_sim | "null" |  "(", expr, ")" ;
+literal      = bool | int | float | complex | string ;
+newobj       = "new", ( type_name, [ ( "(", { expr, "," }, ")" ] ) | array ;
+dict         = "{", { dict_key , "=>", expr, ( NL | ";") }, "}"
+dict_key     = identifier | string | int | float | "(", expr, ")"
+array        = "[", { array_expr, [ ";" ] } "]" ;
+array_expr   = [ "-" ], ( literal | identifier | "(" expr ")" ) ;
+index        = "[", expr, [ ",", expr ], "]" ;
+accessor     = identifier, [ ( "(", { expr, "," }, ")" | { expr, "," } ) ] ;
+bool         = "true" | "false" ;
+float        = int, ".", int ;
+complex      = float, ( "i" | "j" ) ;
+matrix       = "[[", { { matrix_expr }, NL }, "]]" ;
+matrix_expr  = [ "-" ], ( int | float | identifier | "(" expr ")" ) ;
+signature    = type_name, [ { "[", "]" | "[[", "]]" } ] ;
+emit		 = "emit", invoke, ( "every", expr, [ "with", expr ], [ "limit", expr ], [ "until", expr] | [ "once", "at", expr ] ) ;
+simulate     = "simulate", ( "any", [ expr, [ ",", expr ] ] | "flow", expr ) ;
+field_name   = identifier ;
+type_name    = identifier ;
+var_name     = identifier ;
+int          = ...
+string       = ...
+identifier   = ...
+NL           = "\n"
+EOF			 = "EOF"

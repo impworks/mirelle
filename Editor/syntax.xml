@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Syntax name="Mirelle">
+  <HighlightWordsRule name="Keywords">
+    <Words>
+      type var if else for while in do return include autoconstruct
+      break redo emit static new void use print println as null exit
+      with every limit until once true false enum simulate any planner
+    </Words>
+    <IgnoreCase>false</IgnoreCase>
+    <Foreground>#000000</Foreground>
+    <FontWeight>Bold</FontWeight>
+  </HighlightWordsRule>
+
+  <HighlightWordsRule name="Types">
+    <Words>
+      bool int float string range complex file socket matrix dict
+      chart series histogram colors
+      array io math fourier timer
+      sim sim_result distr
+      flow flow_sim flow_sim_result flow_type modulation symbol block
+    </Words>
+    <IgnoreCase>false</IgnoreCase>
+    <Foreground>#00AAAA</Foreground>
+    <FontWeight>Bold</FontWeight>
+  </HighlightWordsRule>
+
+  <HighlightLineRule name="Comments">
+    <LineStart>//</LineStart>
+    <IgnoreCase>true</IgnoreCase>
+    <Foreground>#AAAAAA</Foreground>
+  </HighlightLineRule>
+
+  <AdvancedHighlightRule name="LongComments">
+    <Expression>\/\*.*\/\*</Expression>
+    <IgnoreCase>true</IgnoreCase>
+    <Foreground>#AAAAAA</Foreground>
+  </AdvancedHighlightRule>
+
+  <AdvancedHighlightRule name="Numbers">
+    <Expression>\b(0[xb])?([0-9]+)(\.[0-9]+)?[ij]?\b</Expression>
+    <IgnoreCase>false</IgnoreCase>
+    <Foreground>#AA0000</Foreground>
+  </AdvancedHighlightRule>
+  
+  <AdvancedHighlightRule name="Strings">
+    <Expression>(\"[^"]*\")</Expression>
+    <IgnoreCase>false</IgnoreCase>
+    <Foreground>#00AA00</Foreground>
+  </AdvancedHighlightRule>
+</Syntax>

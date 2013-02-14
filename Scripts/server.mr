@@ -1,0 +1,21 @@
+var idx = 1
+var sock = new socket
+sock.bind 31337
+while true do
+{
+  print "listening..." + string:NL
+  sock.listen
+  print sock.read + string:NL
+  if sock.can_write do
+  {
+    var str = "Hello from Mirelle!" + string:NL + "Page requested " + idx.to_s + " times!"
+    sock.write "HTTP/1.1 200 OK" + string:NL
+    sock.write "Content-Type: text/plain; charset=utf-8" + string:NL
+    sock.write "Content-Length: " + str.size.to_s + string:NL
+    sock.write string:NL
+    sock.write str
+    
+    idx += 1
+    sock.refresh
+  }
+}

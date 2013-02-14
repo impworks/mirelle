@@ -1,0 +1,70 @@
+type brainfuck
+{
+  static int[] @cells
+  static int @ptr
+  static int @idx
+  static string @src
+  
+  static void process: string src
+  {
+    @cells = new [0] * 30000
+    @ptr = 0
+    @idx = 0
+    @src = src
+    
+    while @idx < @src.size do
+    {
+      var curr = @src.at @idx
+      
+      if curr == "+" do @cells[@ptr] += 1
+        
+      if curr == "-" do @cells[@ptr] -= 1
+      
+      if curr == ">" do @ptr += 1
+      
+      if curr == "<" do @ptr -= 1
+      
+      if curr == "." do print @cells[@ptr].char
+      
+      if curr == "," do @cells[@ptr] = io:read.at(0).ord
+      
+      if curr == "[" do scan_fwd
+      
+      if curr == "]" do scan_back
+      
+      @idx += 1
+    }
+  }
+  
+  static void scan_fwd
+  {
+    if @cells[@ptr] != 0 do return
+    
+    var braces = 0
+    while braces >= 0 do
+    {
+      @idx += 1
+      var curr = @src.at @idx
+      if curr == "[" do braces += 1
+      if curr == "]" do braces -= 1
+    }
+  }
+  
+  static void scan_back
+  {
+    var braces = 0
+    while braces >= 0 do
+    {
+      @idx -= 1
+      var curr = @src.at @idx
+      if curr == "[" do braces -= 1
+      if curr == "]" do braces += 1
+    }
+    
+    @idx -= 1
+  }
+}
+
+var code = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+brainfuck:process code
+io:wait

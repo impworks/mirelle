@@ -1,0 +1,18 @@
+type test
+{
+  static void doit
+  {
+    sim:takes 25
+  }
+}
+
+emit test:doit with distr:uniform 5, 10 limit 10
+var result = sim:process 2
+
+var graph = new chart "Simulation results"
+for curr in result.queue_graph do
+{
+  var series = graph.new_series "Processor queue", 2
+  series.plot curr
+}
+io:read

@@ -1,0 +1,19 @@
+use math
+use colors
+
+var chart = new chart "Leaf"
+var leaf = chart.new_series "Leaf", green
+
+var grads = 0 ~ 0.01 ~ (PI*2)
+var coeff = 100
+for grad in grads do
+{
+  var rad = (1 + sin grad) *
+            (1 - 0.9 * abs sin 4*grad) *
+            (0.9 + 0.05 * cos 200*grad)
+            
+  var x = coeff * rad * cos grad
+  var y = coeff * rad * sin grad
+  leaf.plot x, y
+  io:wait 5
+}

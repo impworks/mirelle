@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="errAutoconstructInherited" xml:space="preserve">
+    <value>Унаследованный тип не может содержать автоконструктор!</value>
+  </data>
+  <data name="errAutoconstructNoFields" xml:space="preserve">
+    <value>Тип '{0}' не содержит полей, поэтому невозможно создать автоконструктор!</value>
+  </data>
+  <data name="errAutoconstructRepeated" xml:space="preserve">
+    <value>Этот тип уже помечен как автоконструируемый!</value>
+  </data>
+  <data name="errConstExpected" xml:space="preserve">
+    <value>Требуется константа!</value>
+  </data>
+  <data name="errExtendBuiltInType" xml:space="preserve">
+    <value>Тип '{0}' является встроенным и не может быть расширен свойствами и методами!</value>
+  </data>
+  <data name="errFieldAtmarkExpected" xml:space="preserve">
+    <value>Имя поля должно начинаться с символа @!</value>
+  </data>
+  <data name="errFieldNameExpected" xml:space="preserve">
+    <value>Требуется имя поля!</value>
+  </data>
+  <data name="errFieldOutsideType" xml:space="preserve">
+    <value>Поле не может быть использовано вне методов своего типа!</value>
+  </data>
+  <data name="errFieldRedefinition" xml:space="preserve">
+    <value>Поле '{0}' уже объявлено в типе '{1}'!</value>
+  </data>
+  <data name="errFileAlreadyCompiled" xml:space="preserve">
+    <value>Файл '{0}' уже скомпилирован!</value>
+  </data>
+  <data name="errFileNotFound" xml:space="preserve">
+    <value>Файл '{0}' не найден!</value>
+  </data>
+  <data name="errIncludePathExpected" xml:space="preserve">
+    <value>Требуется имя файла или путь!</value>
+  </data>
+  <data name="errIncorrectSignature" xml:space="preserve">
+    <value>'{0}' не является подписью типа!</value>
+  </data>
+  <data name="errInheritBuiltInType" xml:space="preserve">
+    <value>Тип '{0}' является встроенным и не может использоваться при наследовании!</value>
+  </data>
+  <data name="errMethodCurlyBrace" xml:space="preserve">
+    <value>Тело метода должно быть окружено фигурными скобками!</value>
+  </data>
+  <data name="errMethodNameExpected" xml:space="preserve">
+    <value>Требуется имя метода!</value>
+  </data>
+  <data name="errMethodNotFoundInType" xml:space="preserve">
+    <value>Метод '{0}' принимающий '{1}' не был найден в типе '{2}'!</value>
+  </data>
+  <data name="errMethodRedefinition" xml:space="preserve">
+    <value>Метод '{0}' с таким же набором параметров уже объявлен в типе '{1}'!</value>
+  </data>
+  <data name="errNewLineExpected" xml:space="preserve">
+    <value>Выражение должно заканчиваться переводом строки!</value>
+  </data>
+  <data name="errNotAllPathsReturn" xml:space="preserve">
+    <value>Не все пути потока выполнения в методе '{0}' возвращают значение!</value>
+  </data>
+  <data name="errParameterNameDuplicated" xml:space="preserve">
+    <value>Параметр '{0}' уже объявлен в данном методе!</value>
+  </data>
+  <data name="errParameterNameExpected" xml:space="preserve">
+    <value>Требуется имя параметра!</value>
+  </data>
+  <data name="errParamSeparatorExpected" xml:space="preserve">
+    <value>Параметры метода должны разделяться запятыми!</value>
+  </data>
+  <data name="errReturnTypeMismatch" xml:space="preserve">
+    <value>Метод '{0}' объявлен как '{1}' и не может возвращать '{2}'!</value>
+  </data>
+  <data name="errReturnVoidExpected" xml:space="preserve">
+    <value>Метод '{0}' объявлен как 'void' и не может возвращать значения!</value>
+  </data>
+  <data name="errTypeCurlyBrace" xml:space="preserve">
+    <value>Тело типа должно быть окружено фигурными скобками!</value>
+  </data>
+  <data name="errTypeNameExpected" xml:space="preserve">
+    <value>Требуется имя типа!</value>
+  </data>
+  <data name="errTypeNotFound" xml:space="preserve">
+    <value>Тип '{0}' не объявлен!</value>
+  </data>
+  <data name="errTypeParentNotFound" xml:space="preserve">
+    <value>Нельзя объявить тип '{0}', поскольку родительский тип '{1}' не объявлен!</value>
+  </data>
+  <data name="errTypeRedefinition" xml:space="preserve">
+    <value>Тип '{0}' уже объявлен!</value>
+  </data>
+  <data name="errTypeSignatureExpected" xml:space="preserve">
+    <value>Требуется подпись типа!</value>
+  </data>
+  <data name="errTypeUnknownStmt" xml:space="preserve">
+    <value>Тело типа может содержать только описания свойств и методов!</value>
+  </data>
+  <data name="errUnknownLexem" xml:space="preserve">
+    <value>Неизвестная лексема!</value>
+  </data>
+  <data name="errVariableNameExpected" xml:space="preserve">
+    <value>Требуется имя переменной!</value>
+  </data>
+  <data name="errVariableRedefinition" xml:space="preserve">
+    <value>Переменная '{0}' уже объявлена в данном контексте!</value>
+  </data>
+  <data name="errVariableUndefined" xml:space="preserve">
+    <value>Переменная '{0}' не объявлена!</value>
+  </data>
+  <data name="errVoidAssign" xml:space="preserve">
+    <value>Нельзя присвоить переменной '{0}' выражение без типа!</value>
+  </data>
+  <data name="errVoidCompoundType" xml:space="preserve">
+    <value>Нельзя создать массив элементов без типа!</value>
+  </data>
+  <data name="errReturnOutsideMethod" xml:space="preserve">
+    <value>Оператор return может быть использован только в теле метода!</value>
+  </data>
+  <data name="errBlockCurlyBrace" xml:space="preserve">
+    <value>Блок кода должен содержаться в фигурных скобках!</value>
+  </data>
+  <data name="errDoExpected" xml:space="preserve">
+    <value>Требуется ключевое слово 'do'!</value>
+  </data>
+  <data name="errInExpected" xml:space="preserve">
+    <value>Требуется ключевое слово 'in'!</value>
+  </data>
+  <data name="errUseTypeDuplicated" xml:space="preserve">
+    <value>Тип '{0}' уже был открыт с помощью директивы 'use'!</value>
+  </data>
+  <data name="errVariableAssignmentExpected" xml:space="preserve">
+    <value>Для объявления переменной требуется ее значение по умолчанию!</value>
+  </data>
+  <data name="errIdentifierExpected" xml:space="preserve">
+    <value>Требуется имя метода или поля!</value>
+  </data>
+  <data name="errSquareBracketExpected" xml:space="preserve">
+    <value>Требуется квадратная скобка!</value>
+  </data>
+  <data name="errFieldInvoke" xml:space="preserve">
+    <value>'{0}' является полем и не может быть вызвано, как метод!</value>
+  </data>
+  <data name="errExpressionExpected" xml:space="preserve">
+    <value>Требуется константа, массив, переменная, поле, вызов метода, оператор new или выражение в скобках!</value>
+  </data>
+  <data name="errLvalueExpected" xml:space="preserve">
+    <value>Слева от знака присваивания может стоять только переменная, поле, элемент массива или матрицы!</value>
+  </data>
+  <data name="errTypeNesting" xml:space="preserve">
+    <value>Типы не могут быть вложенными!</value>
+  </data>
+  <data name="errGlobalStmtInLocal" xml:space="preserve">
+    <value>Команды 'use' и 'include' должны располагаться на верхнем уровне вложенности кода!</value>
+  </data>
+  <data name="errBreakRedoOutsideLoop" xml:space="preserve">
+    <value>Конструкции управления циклом должны находиться внутри цикла!</value>
+  </data>
+  <data name="errIndexingNotAnArray" xml:space="preserve">
+    <value>Выражение слева от индексатора не является массивом!</value>
+  </data>
+  <data name="errParenExpected" xml:space="preserve">
+    <value>Требуется закрывающая круглая скобка!</value>
+  </data>
+  <data name="errAssignTypeMismatch" xml:space="preserve">
+    <value>Переменная и выражение должны быть совместимых типов, нельзя присвоить выражение '{0}' в переменную типа '{1}'!</value>
+  </data>
+  <data name="errFieldNotFound" xml:space="preserve">
+    <value>Поле '{0}' не объявлено в типе '{1}'!</value>
+  </data>
+  <data name="errIdentifierUnresolved" xml:space="preserve">
+    <value>Идентификатор '{0}' не найден в данном контексте!</value>
+  </data>
+  <data name="errTypeIdentifierUnresolved" xml:space="preserve">
+    <value>Тип '{0}' не содержит поля или метода без параметров под названием '{1}'!</value>
+  </data>
+  <data name="errDynamicFromStatic" xml:space="preserve">
+    <value>'{0}' не является статическим, поэтому не может быть использован из статического контекста!</value>
+  </data>
+  <data name="errOperatorTypesMismatch" xml:space="preserve">
+    <value>Оператор '{0}' не может использоваться на объектах типов '{1}' и '{2}'!</value>
+  </data>
+  <data name="errGlobalMethodNotFound" xml:space="preserve">
+    <value>Метод '{0}' не найден ни в одном открытом типе!</value>
+  </data>
+  <data name="errReturnExpressionExpected" xml:space="preserve">
+    <value>Требуется выражение для оператора return!</value>
+  </data>
+  <data name="errConstructorNotFound" xml:space="preserve">
+    <value>Тип '{0}' не содержит конструктора, принимающего параметры '{1}'!</value>
+  </data>
+  <data name="errIncomparableTypes" xml:space="preserve">
+    <value>Невозможно сравнить объекты типов '{0}' и '{1}'!</value>
+  </data>
+  <data name="errRelationIncomparableTypes" xml:space="preserve">
+    <value>Объекты типа '{0}' не имеют отношений 'меньше' или 'больше'!</value>
+  </data>
+  <data name="errUnaryOperatorNumericExpected" xml:space="preserve">
+    <value>Оператор '{0}' требует выражение целого или дробного типа!</value>
+  </data>
+  <data name="errRangeLimitsIntExpected" xml:space="preserve">
+    <value>Пределы для объекта класса 'range' должны быть целочисленными!</value>
+  </data>
+  <data name="errForIterableExpected" xml:space="preserve">
+    <value>Требуется массив, объект класса 'range' или 'dict' для итерации!</value>
+  </data>
+  <data name="errBinaryOperatorIntExpected" xml:space="preserve">
+    <value>Бинарные операции могут проводиться только на целых числах!</value>
+  </data>
+  <data name="errBoolExpected" xml:space="preserve">
+    <value>Требуется выражение логического типа!</value>
+  </data>
+  <data name="errInvalidCast" xml:space="preserve">
+    <value>Невозможно привести объект типа '{0}' к типу '{1}'!</value>
+  </data>
+  <data name="errCastArray" xml:space="preserve">
+    <value>Массивы нельзя приводить к типу!</value>
+  </data>
+  <data name="errSpecialIncorrectReturnType" xml:space="preserve">
+    <value>Специальный метод '{0}' должен возвращать объект типа '{1}'!</value>
+  </data>
+  <data name="errVoidExpression" xml:space="preserve">
+    <value>Функции без возвращаемого значения и null нельзя использовать в выражениях!</value>
+  </data>
+  <data name="errAmbigiousCall" xml:space="preserve">
+    <value>Вызов метода '{0}' неоднозначен: подходят по крайней мере '{1}' и '{2}' !</value>
+  </data>
+  <data name="errThisInStaticContext" xml:space="preserve">
+    <value>Указатель @ недоступен в статическом контексте!</value>
+  </data>
+  <data name="errVariableDefinedNull" xml:space="preserve">
+    <value>При объявлении переменной требуется спецификатор типа! Используйте оператор 'as' для приведения null к желаемому типу.</value>
+  </data>
+  <data name="errInvalidNullCast" xml:space="preserve">
+    <value>Невозможно привести null к типу '{0}'!</value>
+  </data>
+  <data name="errNonStaticMethod" xml:space="preserve">
+    <value>'{0}' нельзя вызвать как статический метод!</value>
+  </data>
+  <data name="errNullAccessor" xml:space="preserve">
+    <value>Null не содержит методов и свойств!</value>
+  </data>
+  <data name="errInvertType" xml:space="preserve">
+    <value>Невомзожно обратить объект типа '{0}'!</value>
+  </data>
+  <data name="errStaticConstructor" xml:space="preserve">
+    <value>Конструктор в типе '{0}' не может быть помечен как статический!</value>
+  </data>
+  <data name="errEmptyMatrix" xml:space="preserve">
+    <value>Матрица должна содержать по крайней мере 1 элемент!</value>
+  </data>
+  <data name="errMatrixLineLengthMismatch" xml:space="preserve">
+    <value>Все строки матрицы должны содержать равное число элементов ('{0}'), но на строке {1} содержится {2} элементов!</value>
+  </data>
+  <data name="errMatrixItemTypeMismatch" xml:space="preserve">
+    <value>Элементом матрицы может быть только выражение целочисленного или дробного типа!</value>
+  </data>
+  <data name="errDoubleSquareBracketExpected" xml:space="preserve">
+    <value>Требуется двойная квадратная скобка, закрывающая литерал матрицы!</value>
+  </data>
+  <data name="errIndexingNotAMatrix" xml:space="preserve">
+    <value>Выражение слева от индексатора не является матрицей!</value>
+  </data>
+  <data name="errIntIndexExpected" xml:space="preserve">
+    <value>Индекс массива или матрицы должен быть целочисленным!</value>
+  </data>
+  <data name="errMatrixInExpression" xml:space="preserve">
+    <value>Матрица должна быть присвоена переменной, прежде чем использовать ее в выражениях!</value>
+  </data>
+  <data name="errMatrixExpressionParensExpected" xml:space="preserve">
+    <value>Выражения внутри литерала матрицы должны быть обернуты в скобки!</value>
+  </data>
+  <data name="errCommaExpected" xml:space="preserve">
+    <value>Требуется запятая!</value>
+  </data>
+  <data name="errSplatArrayExpected" xml:space="preserve">
+    <value>Для разделяющего присваивания требуется выражение-массив!</value>
+  </data>
+  <data name="errIntFloatExpected" xml:space="preserve">
+    <value>Требуется выражение целочисленного или дробного типа!</value>
+  </data>
+  <data name="errTildeExpected" xml:space="preserve">
+    <value>Требуется волнистая черта (~)!</value>
+  </data>
+  <data name="errTypeParentDefaultCtor" xml:space="preserve">
+    <value>Для наследования тип '{0}' должен содержать конструктор по умолчанию!</value>
+  </data>
+  <data name="errTimeSpanExpected" xml:space="preserve">
+    <value>Описание источника события должно содержать раздел 'with', 'every', или оба!</value>
+  </data>
+  <data name="errEmitConditionExpected" xml:space="preserve">
+    <value>Условие для источника событий должно быть логическим выражением!</value>
+  </data>
+  <data name="errEmitDistributionExpected" xml:space="preserve">
+    <value>Распределение для источника событий должно быть объектом класса distr!</value>
+  </data>
+  <data name="errEmitLimitExpected" xml:space="preserve">
+    <value>Предел создаваемых событий для источника должен быть целочисленным!</value>
+  </data>
+  <data name="errEmitStepExpected" xml:space="preserve">
+    <value>Временной шаг создаваемых событий для источника должен быть целочисленным или дробным!</value>
+  </data>
+  <data name="errClosuredMember" xml:space="preserve">
+    <value>Локальные поля и методы нельзя использовать в замыканиях!</value>
+  </data>
+  <data name="errClosuredThis" xml:space="preserve">
+    <value>Указатель @ нельзя использовать в замыканиях!</value>
+  </data>
+  <data name="errMethodNotFound" xml:space="preserve">
+    <value>Метод '{0}' принимающий '{1}' не был найден!</value>
+  </data>
+  <data name="errDefaultConstructorNotFound" xml:space="preserve">
+    <value>Тип '{0}' не содержит конструктора по умолчанию!</value>
+  </data>
+  <data name="errEmptyArray" xml:space="preserve">
+    <value>Массив должен содержать по крайней мере 1 элемент!</value>
+  </data>
+  <data name="errArrayItemNull" xml:space="preserve">
+    <value>При объявлении массива требуется спецификатор типа! Используйте оператор 'as' для приведения null к желаемому типу.</value>
+  </data>
+  <data name="errConstantOverflow" xml:space="preserve">
+    <value>Константа слишком велика или слишком мала для данного типа!</value>
+  </data>
+  <data name="errArrayTypeMismatch" xml:space="preserve">
+    <value>Нельзя добавить элемент типа '{0}' в массив типа '{1}'!</value>
+  </data>
+  <data name="errEnumParent" xml:space="preserve">
+    <value>Перечислимые типы не могут наследоваться!</value>
+  </data>
+  <data name="errEnumRedefinition" xml:space="preserve">
+    <value>Значение '{0}' уже существует в перечислимом типе '{1}'!</value>
+  </data>
+  <data name="errInheritEnum" xml:space="preserve">
+    <value>Нельзя унаследовать обычный тип от перечисляемого типа '{0}'!</value>
+  </data>
+  <data name="errEnumValueNameExpected" xml:space="preserve">
+    <value>Требуется имя значения перечислимого типа!</value>
+  </data>
+  <data name="errSpecialInEnum" xml:space="preserve">
+    <value>Идентификатор '{0}' является специальным и не может быть использован в качестве значения для перечислимого типа!</value>
+  </data>
+  <data name="errVariableDefinitionOnly" xml:space="preserve">
+    <value>Объявление переменной не может быть единственным выражением в блоке кода!</value>
+  </data>
+  <data name="errPlannerArgsMismatch" xml:space="preserve">
+    <value>Метод планировщика должен принимать два аргумента: 'flow[]' и 'symbol'!</value>
+  </data>
+  <data name="errPlannerExpression" xml:space="preserve">
+    <value>Требуется имя метода планировщика, статического или экземплярного, без параметров!</value>
+  </data>
+  <data name="errPlannerTypeMismatch" xml:space="preserve">
+    <value>Метод планировщика должен возвращать 'symbol'!</value>
+  </data>
+  <data name="errUnexpectedLexem" xml:space="preserve">
+    <value>Неожиданный тип лексемы: '{0}'.</value>
+  </data>
+  <data name="errSimulationProcessorsInt" xml:space="preserve">
+    <value>Количество процессоров для симуляции должно быть целым числом!</value>
+  </data>
+  <data name="errSimulationQueueInt" xml:space="preserve">
+    <value>Максимальная длина очереди должна быть целым числом!</value>
+  </data>
+  <data name="errSimulationType" xml:space="preserve">
+    <value>Требуется тип симуляции ("any" или "planner")!</value>
+  </data>
+  <data name="errSimulateMultiple" xml:space="preserve">
+    <value>В одной программе может быть только один оператор симуляции планировщика!</value>
+  </data>
+  <data name="errDictItemTypeMismatch" xml:space="preserve">
+    <value>Ключи и значения в словаре должны быть строкового типа!</value>
+  </data>
+  <data name="errDictArrowExpected" xml:space="preserve">
+    <value>Требуется разделитель ключа и значения '=&gt;'!</value>
+  </data>
+  <data name="errDictCurlyBrace" xml:space="preserve">
+    <value>Литерал dict должен быть окружен фигурными скобками!</value>
+  </data>
+  <data name="errStringExpected" xml:space="preserve">
+    <value>Требуется строковое выражение!</value>
+  </data>
+  <data name="errAtExpected" xml:space="preserve">
+    <value>Требуется ключевое слово 'at' после 'once'!</value>
+  </data>
+  <data name="errDictIterKeyRequired" xml:space="preserve">
+    <value>Для обхода объекта dict требуется указание двух переменных - для ключа и для значения! Чтобы использовать только ключи или только значения, используйте dict.keys и dict.values соответствтенно.</value>
+  </data>
+  <data name="errDictKeyExpected" xml:space="preserve">
+    <value>Требуется идентификатор, строка или выражение в скобках в качестве ключа для dict!</value>
+  </data>
+  <data name="errArrayExpressionParensExpected" xml:space="preserve">
+    <value>Выражение внутри литерала массива должно быть обернуто в скобки!</value>
+  </data>
+</root>

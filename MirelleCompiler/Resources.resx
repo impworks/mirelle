@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="errAutoconstructInherited" xml:space="preserve">
+    <value>An inherited type cannot be autoconstructed!</value>
+  </data>
+  <data name="errAutoconstructNoFields" xml:space="preserve">
+    <value>Type '{0}' contains no fields and cannot be autoconstructed!</value>
+  </data>
+  <data name="errAutoconstructRepeated" xml:space="preserve">
+    <value>This type has already been marked as autoconstructed!</value>
+  </data>
+  <data name="errConstExpected" xml:space="preserve">
+    <value>A constant value is expected!</value>
+  </data>
+  <data name="errExtendBuiltInType" xml:space="preserve">
+    <value>The type '{0}' is built-in and cannot be extended with methods and properties!</value>
+  </data>
+  <data name="errFieldAtmarkExpected" xml:space="preserve">
+    <value>A field name should start with a @ sign!</value>
+  </data>
+  <data name="errFieldNameExpected" xml:space="preserve">
+    <value>A field name is expected!</value>
+  </data>
+  <data name="errFieldOutsideType" xml:space="preserve">
+    <value>A field cannot be used outside methods of a type!</value>
+  </data>
+  <data name="errFieldRedefinition" xml:space="preserve">
+    <value>A field named '{0}' already exists in type '{1}'!</value>
+  </data>
+  <data name="errFileAlreadyCompiled" xml:space="preserve">
+    <value>File '{0}' was already compiled!</value>
+  </data>
+  <data name="errFileNotFound" xml:space="preserve">
+    <value>File '{0}' was not found!</value>
+  </data>
+  <data name="errIncludePathExpected" xml:space="preserve">
+    <value>A file name or path is expected!</value>
+  </data>
+  <data name="errIncorrectSignature" xml:space="preserve">
+    <value>'{0}' is not a valid expression type signature!</value>
+  </data>
+  <data name="errInheritBuiltInType" xml:space="preserve">
+    <value>The type '{0}' is built-in and cannot be inherited from!</value>
+  </data>
+  <data name="errMethodCurlyBrace" xml:space="preserve">
+    <value>Method body should be enclosed in curly braces!</value>
+  </data>
+  <data name="errMethodNameExpected" xml:space="preserve">
+    <value>A method name is expected!</value>
+  </data>
+  <data name="errMethodNotFoundInType" xml:space="preserve">
+    <value>No method named '{0}' accepting '{1}' was found in type '{2}'!</value>
+  </data>
+  <data name="errMethodRedefinition" xml:space="preserve">
+    <value>A method named '{0}' already exists in type '{1}' and has identical set of parameters!</value>
+  </data>
+  <data name="errNewLineExpected" xml:space="preserve">
+    <value>A statement should be terminated with a newline!</value>
+  </data>
+  <data name="errNotAllPathsReturn" xml:space="preserve">
+    <value>Not all code paths in method '{0}' return a value!</value>
+  </data>
+  <data name="errParameterNameDuplicated" xml:space="preserve">
+    <value>Parameter named '{0}' is already defined for this method!</value>
+  </data>
+  <data name="errParameterNameExpected" xml:space="preserve">
+    <value>A parameter name is expected!</value>
+  </data>
+  <data name="errParamSeparatorExpected" xml:space="preserve">
+    <value>Parameters must be separated by commas!</value>
+  </data>
+  <data name="errReturnTypeMismatch" xml:space="preserve">
+    <value>Method '{0}' requires return type '{1}', cannot return a '{2}'!</value>
+  </data>
+  <data name="errReturnVoidExpected" xml:space="preserve">
+    <value>Method '{0}' is declared as 'void' and cannot return a value!</value>
+  </data>
+  <data name="errTypeCurlyBrace" xml:space="preserve">
+    <value>Type body should be enclosed in curly braces!</value>
+  </data>
+  <data name="errTypeNameExpected" xml:space="preserve">
+    <value>A type name is expected!</value>
+  </data>
+  <data name="errTypeNotFound" xml:space="preserve">
+    <value>Type '{0}' is not defined!</value>
+  </data>
+  <data name="errTypeParentNotFound" xml:space="preserve">
+    <value>Cannot define type '{0}' because parent type '{1}' is not defined!</value>
+  </data>
+  <data name="errTypeRedefinition" xml:space="preserve">
+    <value>Type '{0}' was already defined!</value>
+  </data>
+  <data name="errTypeSignatureExpected" xml:space="preserve">
+    <value>A type signature is expected!</value>
+  </data>
+  <data name="errTypeUnknownStmt" xml:space="preserve">
+    <value>A type body can only consist of field and method definitions!</value>
+  </data>
+  <data name="errUnknownLexem" xml:space="preserve">
+    <value>Unknown lexem!</value>
+  </data>
+  <data name="errVariableNameExpected" xml:space="preserve">
+    <value>A variable name is expected!</value>
+  </data>
+  <data name="errVariableRedefinition" xml:space="preserve">
+    <value>A variable named '{0}' already exists in current scope!</value>
+  </data>
+  <data name="errVariableUndefined" xml:space="preserve">
+    <value>A variable named '{0}' is not defined!</value>
+  </data>
+  <data name="errVoidAssign" xml:space="preserve">
+    <value>The variable '{0}' cannot be assigned a void!</value>
+  </data>
+  <data name="errVoidCompoundType" xml:space="preserve">
+    <value>Cannot create an array or a matrix of voids!</value>
+  </data>
+  <data name="errReturnOutsideMethod" xml:space="preserve">
+    <value>Return statements are only allowed inside a method!</value>
+  </data>
+  <data name="errBlockCurlyBrace" xml:space="preserve">
+    <value>A code block should be enclosed in curly braces!</value>
+  </data>
+  <data name="errDoExpected" xml:space="preserve">
+    <value>The 'do' keyword is expected!</value>
+  </data>
+  <data name="errInExpected" xml:space="preserve">
+    <value>The 'in' keyword is expected!</value>
+  </data>
+  <data name="errUseTypeDuplicated" xml:space="preserve">
+    <value>The type '{0}' has already been marked as 'used'!</value>
+  </data>
+  <data name="errVariableAssignmentExpected" xml:space="preserve">
+    <value>Variables should be assigned a value at declaration!</value>
+  </data>
+  <data name="errIdentifierExpected" xml:space="preserve">
+    <value>A field or a method name is expected!</value>
+  </data>
+  <data name="errSquareBracketExpected" xml:space="preserve">
+    <value>A square bracket is expected!</value>
+  </data>
+  <data name="errFieldInvoke" xml:space="preserve">
+    <value>'{0}' is a field and cannot be invoked like a method!</value>
+  </data>
+  <data name="errExpressionExpected" xml:space="preserve">
+    <value>Expecting a constant, array, variable, method call, object creation or a subexpression in parens!</value>
+  </data>
+  <data name="errLvalueExpected" xml:space="preserve">
+    <value>It's only possible to assign to a variable, field, array or matrix item!</value>
+  </data>
+  <data name="errTypeNesting" xml:space="preserve">
+    <value>Types cannot be nested!</value>
+  </data>
+  <data name="errGlobalStmtInLocal" xml:space="preserve">
+    <value>The 'use' and 'include' commands cannot be nested!</value>
+  </data>
+  <data name="errBreakRedoOutsideLoop" xml:space="preserve">
+    <value>Loop control statements must be inside a loop!</value>
+  </data>
+  <data name="errIndexingNotAnArray" xml:space="preserve">
+    <value>The lefthand expression is not an array!</value>
+  </data>
+  <data name="errParenExpected" xml:space="preserve">
+    <value>A closing paren is expected!</value>
+  </data>
+  <data name="errAssignTypeMismatch" xml:space="preserve">
+    <value>Assignment target and expression must be of the same type, cannot assign '{0}' to '{1}'!</value>
+  </data>
+  <data name="errFieldNotFound" xml:space="preserve">
+    <value>Field '{0}' does not exist in type '{1}'!</value>
+  </data>
+  <data name="errIdentifierUnresolved" xml:space="preserve">
+    <value>The identifier '{0}' does not exist in current context!</value>
+  </data>
+  <data name="errTypeIdentifierUnresolved" xml:space="preserve">
+    <value>The type '{0}' does not have a field or a method named '{1}'!</value>
+  </data>
+  <data name="errDynamicFromStatic" xml:space="preserve">
+    <value>'{0}' is not static and cannot be accessed from a static context!</value>
+  </data>
+  <data name="errArrayTypeMismatch" xml:space="preserve">
+    <value>Cannot add an item of type '{0}' to an array of '{1}'!</value>
+  </data>
+  <data name="errOperatorTypesMismatch" xml:space="preserve">
+    <value>Operator '{0}' cannot be used on types '{1}' and '{2}'!</value>
+  </data>
+  <data name="errGlobalMethodNotFound" xml:space="preserve">
+    <value>Method '{0}' was not found in any visible types!</value>
+  </data>
+  <data name="errReturnExpressionExpected" xml:space="preserve">
+    <value>A return expression is expected!</value>
+  </data>
+  <data name="errConstructorNotFound" xml:space="preserve">
+    <value>The type '{0}' does not have a constructor accepting '{1}'!</value>
+  </data>
+  <data name="errIncomparableTypes" xml:space="preserve">
+    <value>Types '{0}' and '{1}' cannot be compared!</value>
+  </data>
+  <data name="errRelationIncomparableTypes" xml:space="preserve">
+    <value>Objects of type '{0}' cannot be compared as 'less' and 'greater'!</value>
+  </data>
+  <data name="errUnaryOperatorNumericExpected" xml:space="preserve">
+    <value>Expecting an int or a float value for the '{0}' operator!</value>
+  </data>
+  <data name="errRangeLimitsIntExpected" xml:space="preserve">
+    <value>Range limits must be of 'int' type!</value>
+  </data>
+  <data name="errForIterableExpected" xml:space="preserve">
+    <value>An array, range or dict expression is expected for iteration!</value>
+  </data>
+  <data name="errBinaryOperatorIntExpected" xml:space="preserve">
+    <value>Binary operations can only be performed on integers!</value>
+  </data>
+  <data name="errBoolExpected" xml:space="preserve">
+    <value>A boolean expression is expected!</value>
+  </data>
+  <data name="errInvalidCast" xml:space="preserve">
+    <value>Cannot cast object of type '{0}' to type '{1}'!</value>
+  </data>
+  <data name="errCastArray" xml:space="preserve">
+    <value>Array types cannot be casted!</value>
+  </data>
+  <data name="errSpecialIncorrectReturnType" xml:space="preserve">
+    <value>The special method '{0}' must return a '{1}'!</value>
+  </data>
+  <data name="errVoidExpression" xml:space="preserve">
+    <value>Cannot use a void function or null value as a part of expression!</value>
+  </data>
+  <data name="errAmbigiousCall" xml:space="preserve">
+    <value>The call to method '{0}' is ambigious: at least '{1}' and '{2}' match!</value>
+  </data>
+  <data name="errThisInStaticContext" xml:space="preserve">
+    <value>The self-reference cannot used in a static context!</value>
+  </data>
+  <data name="errVariableDefinedNull" xml:space="preserve">
+    <value>A type specifier is required when defining a variable! Please cast the null to desired type using the 'as' operator!</value>
+  </data>
+  <data name="errInvalidNullCast" xml:space="preserve">
+    <value>Cannot cast a null-pointer to type '{0}'!</value>
+  </data>
+  <data name="errNonStaticMethod" xml:space="preserve">
+    <value>'{0}' cannot be called as a static method!</value>
+  </data>
+  <data name="errNullAccessor" xml:space="preserve">
+    <value>Cannot invoke methods or access fields of an unspecified type!</value>
+  </data>
+  <data name="errInvertType" xml:space="preserve">
+    <value>Cannot invert an object of type '{0}'!</value>
+  </data>
+  <data name="errStaticConstructor" xml:space="preserve">
+    <value>The constructor in type '{0}' cannot be marked as static!</value>
+  </data>
+  <data name="errEmptyMatrix" xml:space="preserve">
+    <value>A matrix must contain at least one item!</value>
+  </data>
+  <data name="errMatrixLineLengthMismatch" xml:space="preserve">
+    <value>Each line in a must contain equal number of items ('{0}'), but line {1} has {2} items!</value>
+  </data>
+  <data name="errMatrixItemTypeMismatch" xml:space="preserve">
+    <value>A matrix item can only be an int or a float expression!</value>
+  </data>
+  <data name="errDoubleSquareBracketExpected" xml:space="preserve">
+    <value>A matrix-closing double square bracket is expected!</value>
+  </data>
+  <data name="errIndexingNotAMatrix" xml:space="preserve">
+    <value>The lefthand expression is not a matrix!</value>
+  </data>
+  <data name="errIntIndexExpected" xml:space="preserve">
+    <value>An array or matrix index must be of 'int' type!</value>
+  </data>
+  <data name="errMatrixInExpression" xml:space="preserve">
+    <value>A matrix must be assigned to a variable before it can be used in an expression!</value>
+  </data>
+  <data name="errMatrixExpressionParensExpected" xml:space="preserve">
+    <value>Expressions within a matrix literal must be enclosed in parens!</value>
+  </data>
+  <data name="errCommaExpected" xml:space="preserve">
+    <value>A comma is expected!</value>
+  </data>
+  <data name="errSplatArrayExpected" xml:space="preserve">
+    <value>The expression must be an array to use splat assignment!</value>
+  </data>
+  <data name="errIntFloatExpected" xml:space="preserve">
+    <value>An integer or a float expression is expected!</value>
+  </data>
+  <data name="errTildeExpected" xml:space="preserve">
+    <value>A tilde (~) is expected!</value>
+  </data>
+  <data name="errTypeParentDefaultCtor" xml:space="preserve">
+    <value>The parent type, '{0}', must have a default constructor!</value>
+  </data>
+  <data name="errTimeSpanExpected" xml:space="preserve">
+    <value>An emitter definition must contain either "with" or "every" clause, or both!</value>
+  </data>
+  <data name="errEmitConditionExpected" xml:space="preserve">
+    <value>Emitter condition must be a boolean expression!</value>
+  </data>
+  <data name="errEmitDistributionExpected" xml:space="preserve">
+    <value>Emitter distribution expected!</value>
+  </data>
+  <data name="errEmitLimitExpected" xml:space="preserve">
+    <value>Emitter event limit must be an integer!</value>
+  </data>
+  <data name="errEmitStepExpected" xml:space="preserve">
+    <value>Emitter step must be a floating point number or an integer!</value>
+  </data>
+  <data name="errClosuredMember" xml:space="preserve">
+    <value>Local fields and methods cannot be used in closures!</value>
+  </data>
+  <data name="errClosuredThis" xml:space="preserve">
+    <value>The @ pointer cannot be used in closures!</value>
+  </data>
+  <data name="errMethodNotFound" xml:space="preserve">
+    <value>No method named '{0}' accepting '{1}' was found!</value>
+  </data>
+  <data name="errDefaultConstructorNotFound" xml:space="preserve">
+    <value>The type '{0}' does not have a default constructor!</value>
+  </data>
+  <data name="errEmptyArray" xml:space="preserve">
+    <value>An array must contain at least one item!</value>
+  </data>
+  <data name="errArrayItemNull" xml:space="preserve">
+    <value>A type specifier is required when defining an array! Please cast the null to desired type using the 'as' operator!</value>
+  </data>
+  <data name="errConstantOverflow" xml:space="preserve">
+    <value>The constant value is either too large or too small for it's type!</value>
+  </data>
+  <data name="errConstructEnum" xml:space="preserve">
+    <value>Cannot construct '{0}' because it is an enum, not a type!</value>
+  </data>
+  <data name="errEnumRedefinition" xml:space="preserve">
+    <value>The value named '{0}' already exists in the enum '{1}'!</value>
+  </data>
+  <data name="errInheritEnum" xml:space="preserve">
+    <value>Cannot inherit from '{0}' because it's an enum, not a type!</value>
+  </data>
+  <data name="errEnumParent" xml:space="preserve">
+    <value>Enums cannot inherit from types!</value>
+  </data>
+  <data name="errEnumValueNameExpected" xml:space="preserve">
+    <value>An enum value name is expected!</value>
+  </data>
+  <data name="errSpecialInEnum" xml:space="preserve">
+    <value>The '{0}' identifier is special and cannot be a an enum value!</value>
+  </data>
+  <data name="errVariableDefinitionOnly" xml:space="preserve">
+    <value>The variable definition cannot be the only statement in the code block!</value>
+  </data>
+  <data name="errPlannerArgsMismatch" xml:space="preserve">
+    <value>The planner method must accept two parameters: 'flow[]' and 'symbol'!</value>
+  </data>
+  <data name="errPlannerExpression" xml:space="preserve">
+    <value>Expecting a planner method name, either static or instance-based, without parameters!</value>
+  </data>
+  <data name="errPlannerTypeMismatch" xml:space="preserve">
+    <value>The planner method must return a 'symbol'!</value>
+  </data>
+  <data name="errUnexpectedLexem" xml:space="preserve">
+    <value>Unexpected '{0}'.</value>
+  </data>
+  <data name="errSimulateProcessorsInt" xml:space="preserve">
+    <value>Processor count must be an integer!</value>
+  </data>
+  <data name="errSimulateQueueInt" xml:space="preserve">
+    <value>Queue length must be an integer!</value>
+  </data>
+  <data name="errSimulateType" xml:space="preserve">
+    <value>A simulation type ("any" or "planner") is expected!</value>
+  </data>
+  <data name="errSimulateMultiple" xml:space="preserve">
+    <value>Cannot have multiple planner simulations within one program!</value>
+  </data>
+  <data name="errDictItemTypeMismatch" xml:space="preserve">
+    <value>A dict key or value must be a string expression!</value>
+  </data>
+  <data name="errDictArrowExpected" xml:space="preserve">
+    <value>A key-value separator '=&gt;' is expected!</value>
+  </data>
+  <data name="errDictCurlyBrace" xml:space="preserve">
+    <value>A dict literal must be enclosed in curly braces!</value>
+  </data>
+  <data name="errStringExpected" xml:space="preserve">
+    <value>A string expression is expected!</value>
+  </data>
+  <data name="errAtExpected" xml:space="preserve">
+    <value>The keyword 'at' is expected after 'once'!</value>
+  </data>
+  <data name="errDictIterKeyRequired" xml:space="preserve">
+    <value>Both key and item variables must be specified when iterating a dict! To iterate keys or values only, use the dict.keys and dict.values methods in the 'in' clause!</value>
+  </data>
+  <data name="errDictKeyExpected" xml:space="preserve">
+    <value>Expecting a string, an identifier or an expression in parens for a dict key!</value>
+  </data>
+  <data name="errArrayExpressionParensExpected" xml:space="preserve">
+    <value>Expression within an array literal must be enclosed in parens!</value>
+  </data>
+</root>

@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CAFC66C-0EE0-472D-A557-73DE17352142}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mirelle</RootNamespace>
+    <AssemblyName>Mirelle</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>%24/mirelle/MirelleCompiler</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs16</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\Libraries\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.9.4.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\Libraries\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Compiler.cs" />
+    <Compile Include="CompilerException.cs" />
+    <Compile Include="CompilerOptions.cs" />
+    <Compile Include="Emitter\Emitter.Import.cs" />
+    <Compile Include="Emitter\Emitter.OpcodeTools.cs" />
+    <Compile Include="Emitter\Emitter.Stdlib.cs" />
+    <Compile Include="Emitter\Emitter.StructureTools.cs" />
+    <Compile Include="Lexer\LexemTypeGroup.cs" />
+    <Compile Include="Lexer\ParsedFileInfo.cs" />
+    <Compile Include="Emitter\Emitter.cs" />
+    <Compile Include="Lexer\DynamicLexemDefinition.cs" />
+    <Compile Include="Lexer\Lexem.cs" />
+    <Compile Include="Lexer\LexemType.cs" />
+    <Compile Include="Lexer\Lexer.cs" />
+    <Compile Include="Lexer\StaticLexemDefinition.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Parser\Parser.LexemTools.cs" />
+    <Compile Include="SyntaxTree\ArrayIndexNode.cs" />
+    <Compile Include="SyntaxTree\ArrayNode.cs" />
+    <Compile Include="SyntaxTree\AsNode.cs" />
+    <Compile Include="SyntaxTree\BinaryOperatorNode.cs" />
+    <Compile Include="SyntaxTree\Builder\Expr.cs" />
+    <Compile Include="SyntaxTree\ComplexNode.cs" />
+    <Compile Include="SyntaxTree\DictNode.cs" />
+    <Compile Include="SyntaxTree\DummyNode.cs" />
+    <Compile Include="SyntaxTree\EmitNode.cs" />
+    <Compile Include="SyntaxTree\ExchangeNode.cs" />
+    <Compile Include="SyntaxTree\ExitNode.cs" />
+    <Compile Include="SyntaxTree\FloatRangeNode.cs" />
+    <Compile Include="SyntaxTree\SimulateAnyNode.cs" />
+    <Compile Include="SyntaxTree\SimulatePlannerNode.cs" />
+    <Compile Include="SyntaxTree\IdentifierKind.cs" />
+    <Compile Include="SyntaxTree\InNode.cs" />
+    <Compile Include="SyntaxTree\LoopNode.cs" />
+    <Compile Include="SyntaxTree\MatrixIndexNode.cs" />
+    <Compile Include="SyntaxTree\MatrixNode.cs" />
+    <Compile Include="SyntaxTree\NewNode.cs" />
+    <Compile Include="SyntaxTree\NullNode.cs" />
+    <Compile Include="SyntaxTree\OperatorAndNode.cs" />
+    <Compile Include="SyntaxTree\OperatorBinaryAndNode.cs" />
+    <Compile Include="SyntaxTree\OperatorBinaryOrNode.cs" />
+    <Compile Include="SyntaxTree\OperatorBinaryShiftLeftNode.cs" />
+    <Compile Include="SyntaxTree\OperatorBinaryShiftRightNode.cs" />
+    <Compile Include="SyntaxTree\OperatorBinaryXorNode.cs" />
+    <Compile Include="SyntaxTree\OperatorCompareNode.cs" />
+    <Compile Include="SyntaxTree\ArrayGetNode.cs" />
+    <Compile Include="SyntaxTree\ArraySetNode.cs" />
+    <Compile Include="SyntaxTree\IdentifierGetNode.cs" />
+    <Compile Include="SyntaxTree\BoolNode.cs" />
+    <Compile Include="SyntaxTree\BreakNode.cs" />
+    <Compile Include="SyntaxTree\CodeBlockNode.cs" />
+    <Compile Include="SyntaxTree\FieldNode.cs" />
+    <Compile Include="SyntaxTree\FloatNode.cs" />
+    <Compile Include="SyntaxTree\ForNode.cs" />
+    <Compile Include="SyntaxTree\MatrixGetNode.cs" />
+    <Compile Include="SyntaxTree\MatrixSetNode.cs" />
+    <Compile Include="SyntaxTree\IdentifierNode.cs" />
+    <Compile Include="SyntaxTree\IdentifierSetNode.cs" />
+    <Compile Include="SyntaxTree\Interfaces.cs" />
+    <Compile Include="SyntaxTree\IfNode.cs" />
+    <Compile Include="SyntaxTree\IntNode.cs" />
+    <Compile Include="SyntaxTree\IdentifierInvokeNode.cs" />
+    <Compile Include="SyntaxTree\MethodNode.cs" />
+    <Compile Include="SyntaxTree\OperatorAddNode.cs" />
+    <Compile Include="SyntaxTree\OperatorDivideNode.cs" />
+    <Compile Include="SyntaxTree\OperatorInvertNode.cs" />
+    <Compile Include="SyntaxTree\OperatorMultiplyNode.cs" />
+    <Compile Include="SyntaxTree\OperatorNegateNode.cs" />
+    <Compile Include="SyntaxTree\OperatorOrNode.cs" />
+    <Compile Include="SyntaxTree\OperatorPowerNode.cs" />
+    <Compile Include="SyntaxTree\OperatorRemainderNode.cs" />
+    <Compile Include="SyntaxTree\OperatorSubtractNode.cs" />
+    <Compile Include="SyntaxTree\PrintNode.cs" />
+    <Compile Include="SyntaxTree\RangeNode.cs" />
+    <Compile Include="SyntaxTree\RedoNode.cs" />
+    <Compile Include="SyntaxTree\ThisNode.cs" />
+    <Compile Include="SyntaxTree\ShortAssignNode.cs" />
+    <Compile Include="SyntaxTree\SignatureNode.cs" />
+    <Compile Include="SyntaxTree\StringNode.cs" />
+    <Compile Include="SyntaxTree\SyntaxTreeNode.cs" />
+    <Compile Include="SyntaxTree\ParameterNode.cs" />
+    <Compile Include="SyntaxTree\ReturnNode.cs" />
+    <Compile Include="SyntaxTree\RootNode.cs" />
+    <Compile Include="SyntaxTree\TypeNode.cs" />
+    <Compile Include="SyntaxTree\VarDeclarationNode.cs" />
+    <Compile Include="SyntaxTree\VarSplatNode.cs" />
+    <Compile Include="SyntaxTree\WhileNode.cs" />
+    <Compile Include="Utils\ClosureDetector.cs" />
+    <Compile Include="Utils\HashList.cs" />
+    <Compile Include="Utils\StringExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Scope.cs" />
+    <Compile Include="Utils\ScopeVariable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MirelleStdlib\Stdlib.csproj">
+      <Project>{DE186AF3-63D2-47B9-9CDB-C506D473E323}</Project>
+      <Name>Stdlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Grammar.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.Ru-ru.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

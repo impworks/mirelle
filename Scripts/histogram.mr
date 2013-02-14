@@ -1,0 +1,19 @@
+var bars = new histogram "График"
+
+var pos = 0.0
+while bars.visible do
+{
+  var data = new [0i] * 10
+  for idx in 0..9 do
+  {
+    var x = pos + math:PI / 10 * idx
+    var y = 7 + math:sin x
+    data[idx] = new complex x, y
+  }
+  
+  bars.plot data
+  
+  pos += 0.1
+  
+  io:wait 20
+}
